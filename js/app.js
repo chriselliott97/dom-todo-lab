@@ -5,6 +5,11 @@ const input = document.querySelector('input')
 // console.dir(input)
 const ul = document.getElementById('todo-list')
 // console.dir(ul)
+const resBtn = document.getElementById('reset-button')
+// console.dir(resBtn)
+
+
+
 
 // --------------------------------------------------------------//
 // create <li> element
@@ -14,6 +19,8 @@ const ul = document.getElementById('todo-list')
 btn.addEventListener('click', function(evt) {
   const li = document.createElement('li')
   li.textContent = input.value
-  document.querySelector('ul').appendChild(li)
+  if (input.value === ''){
+    alert("You cannot add nothing to a to-do list. Don't be lazy!")
+  }else document.querySelector('ul').appendChild(li)
   input.value = ''
 })
