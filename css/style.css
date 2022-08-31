@@ -1,14 +1,12 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
   background: lightgray;
-  border: 1px solid red;
 }
 
-ul {
-  padding: 0px 0px 0px 100px;
-  border: 1px solid red;
+h1 {
+  text-align: center;
 }
-
-li {
-  color: blue;
-}
-

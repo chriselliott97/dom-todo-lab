@@ -11,7 +11,7 @@ const resBtn = document.getElementById('reset-button')
 
 
 
-// --------------------------------------------------------------//
+// -----------------------Event Listeners-----------------------//
 // create <li> element
 // access the text from the input & store the text in the <li>
 // add the <li> to the <ul> in the HTML with the text included
@@ -22,5 +22,12 @@ btn.addEventListener('click', function(evt) {
   if (input.value === ''){
     alert("You cannot add nothing to a to-do list. Don't be lazy!")
   }else document.querySelector('ul').appendChild(li)
+  input.value = ''
+})
+
+// create a button that will reset the ul to be empty
+
+resBtn.addEventListener('click', function(event) {
+  ul.innerHTML = ''
   input.value = ''
 })
